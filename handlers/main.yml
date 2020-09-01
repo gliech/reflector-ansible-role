@@ -1,0 +1,6 @@
+---
+- name: Regenerate package list
+  systemd:
+    name: reflector.service
+    state: restarted
+  become: yes

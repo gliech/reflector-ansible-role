@@ -1,0 +1,15 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: reflector
+  author: gliech
+  description: Install reflector, a script to manage pacman mirrorlists, and
+    configure its systemd integration.
+  license: BSD-4-Clause
+  min_ansible_version: 2.9
+  platforms:
+    - name: ArchLinux
+      versions:
+        - any
+  galaxy_tags: []

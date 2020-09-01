@@ -1,0 +1,22 @@
+---
+- name: Install reflector
+  package:
+    name: reflector
+    state: present
+  become: yes
+
+- name: Configure reflector service
+  template:
+    src: reflector.conf.j2
+    dest: /etc/xdg/reflector/reflector.conf
+    force: yes
+    validate: /usr/bin/reflector @%s --save /dev/null
+  become: yes
+  notify: Regenerate package list
+
+- name: Enable reflector systemd timer
+  systemd:
+    name: reflector.timer
+    state: started
+    enabled: yes
+  become: yes

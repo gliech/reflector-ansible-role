@@ -1,0 +1,8 @@
+---
+reflector_sort_order: age
+reflector_protocols:
+  - https
+reflector_countries: []
+reflector_extra_filters:
+  latest: 5
+reflector_ipv4_only: false

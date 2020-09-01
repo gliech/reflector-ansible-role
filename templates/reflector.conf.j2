@@ -1,0 +1,15 @@
+# {{ ansible_managed }}
+--save {{ reflector_save_path }}
+--sort {{ reflector_sort_order }}
+{% if reflector_protocols %}
+--protocol {{ reflector_protocols|join(',') }}
+{% endif %}
+{% if reflector_countries %}
+--country {{ reflector_countries|join(',') }}
+{% endif %}
+{% for key, value in reflector_extra_filters.items() %}
+--{{ key }} {{ value }}
+{% endfor %}
+{% if reflector_ipv4_only %}
+--ipv4
+{% endif %}
