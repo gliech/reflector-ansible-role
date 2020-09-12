@@ -8,4 +8,7 @@ rules:
       - 'false'
       - 'yes'
       - 'no'
-    ignore: .github/workflows/
+    ignore: |
+      .github/workflows/
+ignore: |
+  node_modules/
