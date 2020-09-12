@@ -5,6 +5,9 @@ jobs:
   ci:
     name: ci
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reflector
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,6 +28,7 @@ jobs:
 
       - name: Full molecule test
         run: pipenv run molecule test
+
 
       - name: Create new release
         uses: cycjimmy/semantic-release-action@v2
