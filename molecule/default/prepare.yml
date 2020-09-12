@@ -1,0 +1,10 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Initialize package cache
+      pacman:
+        update_cache: yes
+        upgrade: yes
+      become: yes
