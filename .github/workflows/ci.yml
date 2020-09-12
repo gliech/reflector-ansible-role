@@ -10,6 +10,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+          path: reflector
 
       - name: Install python
         uses: actions/setup-python@v2
