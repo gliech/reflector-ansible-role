@@ -9,6 +9,7 @@
   template:
     src: reflector.conf.j2
     dest: /etc/xdg/reflector/reflector.conf
+    mode: preserve
     force: yes
     validate: /usr/bin/reflector @%s --save /dev/null
   become: yes
