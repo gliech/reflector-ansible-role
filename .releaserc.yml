@@ -1,0 +1,2 @@
+---
+extends: "@gliech/semantic-release-generic-github-config"
