@@ -1,5 +1,9 @@
 ---
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 name: ci
 jobs:
   test:
@@ -41,6 +45,7 @@ jobs:
   release:
     name: release
     runs-on: ubuntu-latest
+    if: github.ref == "refs/heads/master"
     needs:
       - test
     steps:
