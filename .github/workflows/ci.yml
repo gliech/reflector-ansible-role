@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache/pipenv
-          key: pipenv-${{ hashFiles('Pipfile.lock') }}
+          key: pipenv-${{ hashFiles('reflector/Pipfile.lock') }}
           restore-keys: pipenv-
 
       - name: Install python
