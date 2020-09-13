@@ -9,7 +9,7 @@ lint: |
   yamllint --strict ./
   ansible-lint
 driver:
-  name: docker
+  name: ${MOL_DRIVER:-podman}
 platforms:
   - name: mol-reflector-arch
     image: gliech/docker-archlinux-ansible:latest
