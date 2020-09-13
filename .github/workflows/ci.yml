@@ -10,6 +10,8 @@ jobs:
         working-directory: reflector
     env:
       PIPENV_DOTENV_LOCATION: .github/ci.env
+      PY_COLORS: "1"
+      ANSIBLE_FORCE_COLOR: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
