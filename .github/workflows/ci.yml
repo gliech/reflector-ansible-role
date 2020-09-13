@@ -2,8 +2,8 @@
 on: push
 name: ci
 jobs:
-  ci:
-    name: ci
+  test:
+    name: test
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -12,8 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
           path: reflector
+
+      - name: Restore pipenv cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pipenv
+          key: pipenv-${{ hashFiles('Pipfile.lock') }}
+          restore-keys: pipenv-
 
       - name: Install python
         uses: actions/setup-python@v2
@@ -28,7 +34,16 @@ jobs:
 
       - name: Full molecule test
         run: pipenv run molecule test
-
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    needs:
+      - test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
       - name: Create new release
         uses: cycjimmy/semantic-release-action@v2
