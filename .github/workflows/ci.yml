@@ -8,6 +8,8 @@ jobs:
     defaults:
       run:
         working-directory: reflector
+    env:
+      PIPENV_DOTENV_LOCATION: .github/ci.env
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
