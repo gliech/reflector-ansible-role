@@ -5,3 +5,12 @@
     - name: "Import reflector"
       import_role:
         name: "reflector"
+      vars:
+        reflector_countries:
+          - Germany
+          - France
+          - Belgium
+          - Netherlands
+        reflector_sort_order: rate
+        reflector_extra_filters:
+          number: 20

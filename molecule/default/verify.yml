@@ -3,7 +3,38 @@
 
 - name: Verify
   hosts: all
+  gather_facts: false
   tasks:
-  - name: Example assertion
+  - name: Get reflector.conf info
+    stat:
+      path: /etc/xdg/reflector/reflector.conf
+    register: reflector_conf_info
+
+  - name: Verify contents of reflector.conf
     assert:
-      that: true
+      that: reflector_conf_info.stat.checksum ==
+        "faeaa2afcd8fdf5bbf847547c3c3087754709ed9"
+      quiet: true
+
+  - name: Get reflector.timer info
+    stat:
+      path: /etc/systemd/system/timers.target.wants/reflector.timer
+    register: reflector_timer_info
+
+  - name: Verify reflector timer service is enabled
+    assert:
+      that:
+        - reflector_timer_info.stat.islnk is true
+        - reflector_timer_info.stat.lnk_target ==
+          "/usr/lib/systemd/system/reflector.timer"
+      quiet: true
+
+  - name: Get mirrorlist length
+    command: wc -l /etc/pacman.d/mirrorlist
+    register: mirrorlist_info
+    changed_when: false
+
+  - name: Verify length of mirrorlist (20+10 lines)
+    assert:
+      that: mirrorlist_info.stdout.split()[0] == "30"
+      quiet: true
