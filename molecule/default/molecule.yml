@@ -12,7 +12,7 @@ driver:
   name: ${MOL_DRIVER:-podman}
 platforms:
   - name: mol-reflector-arch
-    image: gliech/docker-archlinux-ansible:latest
+    image: gliech/docker-archlinux-ansible:branch-master
     pre_build_image: true
     privileged: true
     override_command: false
