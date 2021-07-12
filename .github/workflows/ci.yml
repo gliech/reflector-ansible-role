@@ -18,7 +18,7 @@ jobs:
 
       - name: Full molecule test
         run: |
-          pdm install --no-lock --no-self
+          pdm install --no-self
           molecule test
         env:
           PY_COLORS: "1"
