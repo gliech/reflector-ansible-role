@@ -19,7 +19,7 @@ jobs:
       - name: Full molecule test
         run: |
           pdm install --no-self
-          molecule test
+          pdm run molecule test
         env:
           PY_COLORS: "1"
           ANSIBLE_FORCE_COLOR: "1"
