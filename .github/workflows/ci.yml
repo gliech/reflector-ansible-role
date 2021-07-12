@@ -7,43 +7,25 @@ on:
 name: ci
 jobs:
   test:
-    name: test
+    name: molecule test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: reflector
-    env:
-      PIPENV_DOTENV_LOCATION: .github/ci.env
-      PY_COLORS: "1"
-      ANSIBLE_FORCE_COLOR: "1"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          path: reflector
 
-      - name: Restore pipenv cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pipenv
-          key: pipenv-${{ hashFiles('reflector/Pipfile.lock') }}
-          restore-keys: pipenv-
-
-      - name: Install python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pipenv
-          pipenv sync --dev
+      - name: Install pdm
+        uses: pdm-project/setup-pdm@v2
 
       - name: Full molecule test
-        run: pipenv run molecule test
+        run: |
+          pdm install --no-lock --no-self
+          molecule test
+        env:
+          PY_COLORS: "1"
+          ANSIBLE_FORCE_COLOR: "1"
+          MOL_DRIVER: docker
   release:
-    name: release
+    name: release new version
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     needs:

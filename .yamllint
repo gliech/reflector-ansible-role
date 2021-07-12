@@ -1,6 +1,6 @@
 ---
 extends: default
-
+ignore: __pypackages__/
 rules:
   truthy:
     allowed-values:
@@ -8,7 +8,4 @@ rules:
       - 'false'
       - 'yes'
       - 'no'
-    ignore: |
-      .github/workflows/
-ignore: |
-  node_modules/
+    ignore: .github/workflows/
