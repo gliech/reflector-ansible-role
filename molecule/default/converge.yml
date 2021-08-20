@@ -4,7 +4,7 @@
   tasks:
     - name: "Import reflector"
       import_role:
-        name: "reflector"
+        name: "gliech.reflector"
       vars:
         reflector_countries:
           - Germany
