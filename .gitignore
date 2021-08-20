@@ -1,6 +1,2 @@
-.pdm.toml
-pdm.lock
-__pypackages__/
-
 node_modules/
 package-lock.json
