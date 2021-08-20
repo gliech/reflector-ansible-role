@@ -19,7 +19,7 @@ jobs:
           persist-credentials: false
 
       - name: Install python packages
-        run: pip install --no-input --requirements mol_requirements.txt
+        run: pip install --no-input --requirement mol_requirements.txt
 
       - name: Full molecule test
         run: molecule test
