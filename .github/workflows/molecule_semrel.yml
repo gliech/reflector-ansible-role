@@ -34,11 +34,11 @@ jobs:
 
       - name: Install npm packages
         if: github.event_name == 'push'
-        run: npm install -g
+        run: npm install
 
       - name: Create new release
         if: github.event_name == 'push'
-        run: semantic-release
+        run: npx semantic-release
         env:
           GIT_AUTHOR_NAME: ${{ github.actor }}
           GIT_AUTHOR_EMAIL: ${{ github.actor }}@users.noreply.github.com
