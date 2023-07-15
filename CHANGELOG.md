@@ -1,3 +1,26 @@
+## [0.1.3-alpha.1](https://github.com/gliech/reflector-ansible-role/compare/v0.1.2...v0.1.3-alpha.1) (2023-07-15)
+
+
+### Bug Fixes
+
+* use namespaces ([13f98db](https://github.com/gliech/reflector-ansible-role/commit/13f98db9d2259c8b8aced0cd12267a4ea6f483f7))
+
+
+### Documentation
+
+* **license:** revert b7dce3b because gh displayed the modified license as "other" ([a2915fa](https://github.com/gliech/reflector-ansible-role/commit/a2915fa168a05fe61c7cacb0bf98f43728fa9cab))
+
+
+### Styles
+
+* **ci:** line length ([e51784d](https://github.com/gliech/reflector-ansible-role/commit/e51784d663da0f13264e19bb9933745579550bb0))
+
+
+### Continuous Integration
+
+* **deps:** bump semantic-release to v18 ([bd2dcaa](https://github.com/gliech/reflector-ansible-role/commit/bd2dcaa56e2a06548ea55dfe9fc8bf21153f99a6))
+* **fix:** reference alpha version of dependant release module ([9739ca3](https://github.com/gliech/reflector-ansible-role/commit/9739ca3320867e041120c37fedef309d68dd7726))
+
 ## [0.1.2](https://github.com/gliech/reflector-ansible-role/compare/v0.1.1...v0.1.2) (2021-08-21)
 
 
