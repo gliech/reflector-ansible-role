@@ -7,9 +7,9 @@ galaxy_info:
   description: Install reflector, a script to manage pacman mirrorlists, and
     configure its systemd integration.
   license: BSD-4-Clause
-  min_ansible_version: 2.9
+  min_ansible_version: "2.9"
   platforms:
     - name: ArchLinux
       versions:
-        - any
+        - all
   galaxy_tags: []

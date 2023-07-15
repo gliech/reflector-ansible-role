@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: "Import reflector"
-      import_role:
+      ansible.builtin.import_role:
         name: "gliech.reflector"
       vars:
         reflector_countries:
