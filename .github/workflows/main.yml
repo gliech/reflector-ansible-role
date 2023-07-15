@@ -6,10 +6,6 @@ jobs:
   release:
     name: test & release
     uses:
-      gliech/semantic-release-config-github-ansible-role/.github/workflows/test_release.yml@alpha
-    with:
-      semrel_config_version: 1.1.0-alpha.7
-      syntax_checks: false
-      molecule_test: false
+      gliech/semantic-release-config-github-ansible-role/.github/workflows/test_release.yml@v1
     secrets:
       ANSIBLE_GALAXY_API_KEY: ${{ secrets.ANSIBLE_GALAXY_API_KEY }}
