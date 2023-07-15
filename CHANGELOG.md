@@ -1,3 +1,29 @@
+## [0.1.3](https://github.com/gliech/reflector-ansible-role/compare/v0.1.2...v0.1.3) (2023-07-15)
+
+
+### Bug Fixes
+
+* **molecule:** drop the option to overwrite podman driver ([67349d4](https://github.com/gliech/reflector-ansible-role/commit/67349d430d67d4951b52d45b4b6de95e1dd1ee75))
+* remove unneeded package.json ([582a6e1](https://github.com/gliech/reflector-ansible-role/commit/582a6e11b3b71aea1ab71ab9cea0faac0f98fa1b))
+* use namespaces ([13f98db](https://github.com/gliech/reflector-ansible-role/commit/13f98db9d2259c8b8aced0cd12267a4ea6f483f7))
+
+
+### Documentation
+
+* **license:** revert b7dce3b because gh displayed the modified license as "other" ([a2915fa](https://github.com/gliech/reflector-ansible-role/commit/a2915fa168a05fe61c7cacb0bf98f43728fa9cab))
+
+
+### Styles
+
+* **ci:** line length ([e51784d](https://github.com/gliech/reflector-ansible-role/commit/e51784d663da0f13264e19bb9933745579550bb0))
+
+
+### Continuous Integration
+
+* **deps:** bump semantic-release to v18 ([bd2dcaa](https://github.com/gliech/reflector-ansible-role/commit/bd2dcaa56e2a06548ea55dfe9fc8bf21153f99a6))
+* **deps:** update semrel plugin version ([d4ba488](https://github.com/gliech/reflector-ansible-role/commit/d4ba488a0af73a753775497bbcb12d7a013710c6))
+* **fix:** reference alpha version of dependant release module ([9739ca3](https://github.com/gliech/reflector-ansible-role/commit/9739ca3320867e041120c37fedef309d68dd7726))
+
 ## [0.1.3-alpha.1](https://github.com/gliech/reflector-ansible-role/compare/v0.1.2...v0.1.3-alpha.1) (2023-07-15)
 
 
