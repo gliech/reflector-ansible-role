@@ -1,6 +1,6 @@
 ---
 - name: Regenerate package list
-  systemd:
+  ansible.builtin.systemd:
     name: reflector.service
     state: restarted
   become: yes
