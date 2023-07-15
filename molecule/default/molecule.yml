@@ -5,7 +5,7 @@ dependency:
     requirements-file: molecule/default/requirements.yml
     role-file: molecule/default/requirements.yml
 driver:
-  name: ${MOL_DRIVER:-podman}
+  name: podman
 platforms:
   - name: mol-reflector-arch
     image: docker.io/gliech/docker-archlinux-ansible:branch-master
