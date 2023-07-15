@@ -1,3 +1,16 @@
+## [0.1.3-alpha.2](https://github.com/gliech/reflector-ansible-role/compare/v0.1.3-alpha.1...v0.1.3-alpha.2) (2023-07-15)
+
+
+### Bug Fixes
+
+* **molecule:** drop the option to overwrite podman driver ([67349d4](https://github.com/gliech/reflector-ansible-role/commit/67349d430d67d4951b52d45b4b6de95e1dd1ee75))
+* remove unneeded package.json ([582a6e1](https://github.com/gliech/reflector-ansible-role/commit/582a6e11b3b71aea1ab71ab9cea0faac0f98fa1b))
+
+
+### Continuous Integration
+
+* **deps:** update semrel plugin version ([d4ba488](https://github.com/gliech/reflector-ansible-role/commit/d4ba488a0af73a753775497bbcb12d7a013710c6))
+
 ## [0.1.3-alpha.1](https://github.com/gliech/reflector-ansible-role/compare/v0.1.2...v0.1.3-alpha.1) (2023-07-15)
 
 
