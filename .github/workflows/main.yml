@@ -5,7 +5,8 @@ name: main
 jobs:
   release:
     name: test & release
-    uses: gliech/semantic-release-config-github-ansible-role/.github/workflows/test_release.yml@alpha
+    uses:
+      gliech/semantic-release-config-github-ansible-role/.github/workflows/test_release.yml@alpha
     with:
       semrel_config_version: 1.1.0-alpha.2
     secrets:
